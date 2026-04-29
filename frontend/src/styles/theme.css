@@ -1,0 +1,195 @@
+/* === DPDK Core Analyzer Theme === */
+
+:root {
+  --app-primary: #7d95c8;
+  --app-primary-light: #97add7;
+  --app-primary-dark: #667dac;
+  --app-success: #8aac9a;
+  --app-warning: #d3ab78;
+  --app-danger: #cf8f93;
+  --app-info: #98a2b8;
+
+  --app-bg: #f6f3ee;
+  --app-bg-elevated: #fffdf9;
+  --app-surface: #ffffff;
+  --app-surface-subtle: #faf6ef;
+  --app-surface-soft: #f4efe8;
+
+  --app-header-bg: rgba(255, 252, 247, 0.88);
+  --app-header-height: 68px;
+  --app-sidebar-width: 240px;
+
+  --app-text: #2f384d;
+  --app-text-secondary: #5f6980;
+  --app-text-muted: #8e98aa;
+
+  --app-border: #e5e0d7;
+  --app-border-strong: #d8d2c8;
+  --app-card-shadow: 0 18px 40px rgba(148, 145, 169, 0.08);
+  --app-shadow-soft: 0 10px 26px rgba(145, 151, 180, 0.08);
+  --app-radius: 20px;
+  --app-font: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', sans-serif;
+
+  --el-color-primary: var(--app-primary);
+  --el-color-primary-light-3: #9bb0d9;
+  --el-color-primary-light-5: #b7c6e5;
+  --el-color-primary-light-7: #d0daef;
+  --el-color-primary-light-8: #dde4f4;
+  --el-color-primary-light-9: #eef2fb;
+  --el-color-primary-dark-2: var(--app-primary-dark);
+
+  --el-color-success: var(--app-success);
+  --el-color-success-light-3: #a6c1b3;
+  --el-color-success-light-5: #c0d5ca;
+  --el-color-success-light-7: #dbe7e0;
+  --el-color-success-light-8: #e8f0eb;
+  --el-color-success-light-9: #f4f8f5;
+  --el-color-success-dark-2: #749484;
+
+  --el-color-warning: var(--app-warning);
+  --el-color-warning-light-3: #dfbd96;
+  --el-color-warning-light-5: #e8cfb5;
+  --el-color-warning-light-7: #f1e2d5;
+  --el-color-warning-light-8: #f6ece3;
+  --el-color-warning-light-9: #fbf6f1;
+  --el-color-warning-dark-2: #bb9564;
+
+  --el-color-danger: var(--app-danger);
+  --el-color-danger-light-3: #ddb0b3;
+  --el-color-danger-light-5: #e8c8ca;
+  --el-color-danger-light-7: #f1dfe0;
+  --el-color-danger-light-8: #f6e9ea;
+  --el-color-danger-light-9: #fcf5f5;
+  --el-color-danger-dark-2: #b6797d;
+
+  --el-color-info: var(--app-info);
+  --el-color-info-light-3: #afb7c9;
+  --el-color-info-light-5: #c5cbda;
+  --el-color-info-light-7: #dde1ea;
+  --el-color-info-light-8: #e8ebf1;
+  --el-color-info-light-9: #f4f6f9;
+  --el-color-info-dark-2: #7e8798;
+
+  --el-bg-color-page: var(--app-bg);
+  --el-bg-color: var(--app-surface);
+  --el-bg-color-overlay: var(--app-surface);
+  --el-fill-color: #f2ede6;
+  --el-fill-color-light: #f7f3ed;
+  --el-fill-color-lighter: #fbf8f3;
+  --el-fill-color-extra-light: #fdfbf8;
+  --el-border-color: var(--app-border-strong);
+  --el-border-color-light: var(--app-border);
+  --el-border-color-lighter: #ece8e0;
+  --el-border-color-extra-light: #f4f1eb;
+  --el-text-color-primary: var(--app-text);
+  --el-text-color-regular: var(--app-text-secondary);
+  --el-text-color-secondary: var(--app-text-muted);
+  --el-box-shadow: 0 18px 44px rgba(145, 145, 166, 0.11);
+  --el-box-shadow-light: 0 12px 30px rgba(145, 145, 166, 0.10);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--app-font);
+  background:
+    radial-gradient(circle at top left, rgba(155, 176, 217, 0.18), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(233, 210, 180, 0.22), transparent 22%),
+    var(--app-bg);
+  color: var(--app-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.el-card {
+  border-radius: var(--app-radius);
+  border: 1px solid rgba(215, 207, 197, 0.86);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: var(--app-card-shadow);
+}
+
+.el-card__header {
+  padding: 16px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(229, 224, 215, 0.9);
+}
+
+.el-button {
+  border-radius: 14px;
+}
+
+.el-button--primary {
+  --el-button-bg-color: var(--app-primary);
+  --el-button-border-color: var(--app-primary);
+  --el-button-hover-bg-color: var(--app-primary-light);
+  --el-button-hover-border-color: var(--app-primary-light);
+  --el-button-active-bg-color: var(--app-primary-dark);
+  --el-button-active-border-color: var(--app-primary-dark);
+  --el-button-text-color: #fffefb;
+}
+
+.el-alert {
+  border-radius: 16px;
+}
+
+.el-input__wrapper,
+.el-select__wrapper,
+.el-textarea__inner {
+  border-radius: 14px;
+}
+
+.el-tag {
+  border-radius: 999px;
+}
+
+.el-tag--danger {
+  --el-tag-bg-color: #fbf0f1;
+  --el-tag-border-color: #f0d7d9;
+  --el-tag-text-color: #b27176;
+}
+
+.el-tag--warning {
+  --el-tag-bg-color: #faf3eb;
+  --el-tag-border-color: #ecdcc7;
+  --el-tag-text-color: #af8451;
+}
+
+.el-tag--success {
+  --el-tag-bg-color: #eff6f1;
+  --el-tag-border-color: #dce9e0;
+  --el-tag-text-color: #6f8f7d;
+}
+
+.el-tag--info {
+  --el-tag-bg-color: #f3f5f8;
+  --el-tag-border-color: #e2e6ee;
+  --el-tag-text-color: #7e8798;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(154, 160, 176, 0.42);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(124, 131, 149, 0.58);
+}

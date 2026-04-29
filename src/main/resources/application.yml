@@ -1,0 +1,35 @@
+server:
+  port: 8080
+
+spring:
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-file-size: 1GB
+      max-request-size: 2GB
+
+app:
+  upload:
+    dir: ./data/uploads
+  python:
+    scripts-dir: scripts
+    cmd: python3
+  gdb:
+    cmd: gdb
+    script-path: gdb/generate_dpdk_core_log.gdb
+    timeout-seconds: 120
+  auto-scan:
+    enabled: true
+    scan-root: /home/hnhyh/workspace/core
+    max-depth: 6
+    header-probe-lines: 80
+    elf-search-roots:
+      - .
+      - elf
+      - bin
+      - build
+      - target
+  parser:
+    confidence-threshold: 30
+    max-frames-per-thread: 1024

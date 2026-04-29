@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/dpdk_core?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&characterEncoding=UTF-8&createDatabaseIfNotExist=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema.sql
+      continue-on-error: true
+
+app:
+  upload:
+    dir: ./data/uploads
+  python:
+    cmd: python
+  gdb:
+    enabled: false        # Windows 无 GDB, 禁用 core dump 自动解析
+  parser:
+    auto-parse: false
+
+logging:
+  level:
+    com.dpdk.core: DEBUG

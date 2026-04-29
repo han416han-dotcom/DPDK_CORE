@@ -1,0 +1,4 @@
+# DPDK Core Analyzer - Python 依赖
+# 安装: pip install -r requirements.txt
+
+pyelftools>=0.31

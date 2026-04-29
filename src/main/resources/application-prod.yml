@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:mysql://172.25.224.1:3306/dpdk_core?useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&characterEncoding=UTF-8&createDatabaseIfNotExist=true
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema.sql
+      continue-on-error: true
+
+app:
+  upload:
+    dir: /opt/dpdk-core/uploads
+  python:
+    cmd: python3
+  gdb:
+    enabled: true
+
+logging:
+  level:
+    com.dpdk.core: INFO

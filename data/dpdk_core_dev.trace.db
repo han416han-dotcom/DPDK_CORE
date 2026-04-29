@@ -1,0 +1,3 @@
+2026-04-28 15:35:40.943642+08:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "UPLOAD_FILES" not found (this database is empty); SQL statement:
+SELECT  id,file_name,file_type,file_size,file_hash,storage_path,upload_time,status  FROM upload_files      WHERE  (file_hash = ? AND file_type = ?) LIMIT 1 [42104-224]
