@@ -5,7 +5,7 @@
         <div class="scan-header">
           <div>
             <div class="card-title">固定目录自动扫描</div>
-            <div class="card-subtitle">扫描后端配置的固定目录，并显示可直接创建任务的候选文件。</div>
+            <div class="card-subtitle">扫描后端配置的固定目录中的 core 文件，并自动匹配 ELF。</div>
           </div>
           <div class="scan-actions">
             <el-switch
@@ -56,6 +56,14 @@
         class="scan-alert"
       />
 
+      <el-alert
+        title="自动扫描仅处理 500MB 以内的 core 文件；超过 500MB 时建议上传日志进行解析。"
+        type="info"
+        :closable="false"
+        show-icon
+        class="scan-alert"
+      />
+
       <div v-if="scannedCandidates.length > 0" class="scan-list">
         <div v-for="candidate in scannedCandidates" :key="candidate.sourcePath" class="scan-item">
           <div class="scan-item-main">
@@ -101,7 +109,7 @@
 
       <el-empty
         v-else-if="!scanLoading"
-        description="当前扫描目录下没有发现可解析的 core 或日志文件"
+        description="当前扫描目录下没有发现可解析的 core 文件"
       />
     </el-card>
 

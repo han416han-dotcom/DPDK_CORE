@@ -6,8 +6,8 @@ spring:
     active: dev
   servlet:
     multipart:
-      max-file-size: 1GB
-      max-request-size: 2GB
+      max-file-size: 500MB
+      max-request-size: 500MB
 
 app:
   upload:
@@ -18,7 +18,7 @@ app:
   gdb:
     cmd: gdb
     script-path: gdb/generate_dpdk_core_log.gdb
-    timeout-seconds: 120
+    timeout-seconds: 60
   auto-scan:
     enabled: true
     scan-root: /home/hnhyh/workspace/core
